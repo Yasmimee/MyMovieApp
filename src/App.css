@@ -1,0 +1,36 @@
+/* .nav, .navbar-nav, .navbar, .container-fluid, .collapse {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+} */
+
+.cards{
+  display:flex;
+  flex-direction: row;
+  flex-basis: 33.333333%;
+  flex-wrap: wrap;
+  padding: 30px;
+  margin: 0px 0 0px 170px;
+  width:75%;
+}
+.main-img{
+  background-color: black;
+}
+
+.main-img img {
+  width: 1260px;
+}
+.background{
+  background: #000000;
+  background: -moz-linear-gradient(top, #000000 0%, #13116D 100%, #030122 100%);
+  background: -webkit-linear-gradient(top, #000000 0%, #13116D 100%, #030122 100%);
+  background: linear-gradient(to bottom, #000000 0%, #13116D 100%, #030122 100%);
+}
+.add{
+  background: #13116D;
+background: -moz-linear-gradient(top, #13116D 0%, #000000 100%, #000000 100%);
+background: -webkit-linear-gradient(top, #13116D 0%, #000000 100%, #000000 100%);
+background: linear-gradient(to bottom, #13116D 0%, #000000 100%, #000000 100%);
+}
+
