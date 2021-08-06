@@ -1,30 +1,38 @@
-function Navb(){
-    return(
-      <div >
-        <div className="nav">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">My Movie App</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div className="navbar-nav">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
-        <a className="nav-link" href="#">List</a>
-        <a className="nav-link" href="#" >Add a Movie</a>
-        <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">search</a>
-      </div>
-    </div>
-  </div>
-</nav>
-</div>
-<div className="main-img">
-  <img src="https://wallpaperaccess.com/full/329585.jpg"></img>
-</div>
-
-
-</div>
-    )
+import reactDom from "react-dom";
+import Stars from "./stars";
+import { Nav, Navbar, Form, FormControl, ReactStars } from "react-bootstrap";
+function Navb({ setSearch, setRating }){
+  
+    return (
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="mr-auto my-2 my-lg-0"
+            style={{ maxHeight: "100px" }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">Link</Nav.Link>
+  
+            <Nav.Link href="#" disabled>
+              Link
+            </Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <input
+              type="search"
+              placeholder="Search"
+              className="mr-2"
+              aria-label="Search"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </Form>
+          <Stars setRating={setRating} />
+        </Navbar.Collapse>
+      </Navbar>
+    );
+  
 }
 export default Navb

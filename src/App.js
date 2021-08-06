@@ -6,20 +6,20 @@ import List from './components/list.js';
 import Add from './components/add.js';
 import app from './App.css';
 import { useState } from 'react';
-// import { Rating } from 'semantic-ui-react'
+import { Rating } from 'semantic-ui-react'
 
 
 function App() {
 
 
-  // const Rate = () => (
-  //   <Rating defaultRating={3} maxRating={5} disabled />
-  // )
+  const [search, setSearch] = useState("");
+  const [rating, setRating] = useState(0);
+
   
   const [Movies, setMovies]= useState([
-    {id:0, name: "Cruella", type: "disney", img: "https://m.media-amazon.com/images/I/71LD6AGowjL._AC_SL1100_.jpg",describtion: "Cruella follows her life story and her attempts to get revenge on Baroness von Hellman.",},
-    {id:2, name: "Maleficent", type: "disney" , img:"https://wdwnt.com/wp-content/uploads/2019/08/Maleficent.jpg",describtion: "Maleficent is a powerful fairy living in the Moors, a magical forest realm bordering a human kingdom." },
-    {id:3, name: "Mulan", type: "disney" , img: "https://m.media-amazon.com/images/I/71c+SZbaVVL._AC_SL1293_.jpg",describtion: "Mulan is a girl, the only child of her honored family. When the Huns invade China." },
+    {id:0, name: "Cruella", type: "disney", img: "https://m.media-amazon.com/images/I/71LD6AGowjL._AC_SL1100_.jpg",describtion: "Cruella follows her life story and her attempts to get revenge on Baroness von Hellman."},
+    {id:2, name: "Maleficent", type: "disney" , img:"https://wdwnt.com/wp-content/uploads/2019/08/Maleficent.jpg",describtion: "Maleficent is a powerful fairy living in the Moors, a magical forest realm bordering a human kingdom."},
+    {id:3, name: "Mulan", type: "disney" , img: "https://m.media-amazon.com/images/I/71c+SZbaVVL._AC_SL1293_.jpg",describtion: "Mulan is a girl, the only child of her honored family. When the Huns invade China."},
     {id:4, name: "Your name", type: "romance" , img:"https://img.moviepostershop.com/your-name-movie-poster-2016-1020777403.jpg" ,describtion: "A high school boy in Tokyo and a high school girl who suddenly and inexplicably begin to swap bodies." },
     {id:5, name: "Me Before You", type: "romance", img:"https://images-na.ssl-images-amazon.com/images/I/A1lmdwbrheL.jpg",describtion: "Young and quirky Louisa Clark moves from one job to the next to help her family make ends meet" },
     {id:6, name: "Call Me By Your Name", type: "romance", img:"https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_.jpg",describtion: "chronicles the romantic relationship between a 17-year-old, Elio Perlman, and Oliver... "  },
@@ -34,8 +34,8 @@ function App() {
   
   return (
     <div className="App">
-     <Navb />
-     <List Movies={Movies}/>
+     <Navb setSearch={setSearch} setRating={setRating} />
+     <List Movies={Movies} search={search} rating={rating} />
      <Add Movies={Movies} setMovies={setMovies} />
     </div>
   );

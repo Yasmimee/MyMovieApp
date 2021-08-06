@@ -23,14 +23,14 @@
 }
 .background{
   background: #000000;
-  background: -moz-linear-gradient(top, #000000 0%, #13116D 100%, #030122 100%);
-  background: -webkit-linear-gradient(top, #000000 0%, #13116D 100%, #030122 100%);
-  background: linear-gradient(to bottom, #000000 0%, #13116D 100%, #030122 100%);
+background: -moz-linear-gradient(top, #000000 0%, #040728 75%, #09054D 100%);
+background: -webkit-linear-gradient(top, #000000 0%, #040728 75%, #09054D 100%);
+background: linear-gradient(to bottom, #000000 0%, #040728 75%, #09054D 100%);
 }
 .add{
-  background: #13116D;
-background: -moz-linear-gradient(top, #13116D 0%, #000000 100%, #000000 100%);
-background: -webkit-linear-gradient(top, #13116D 0%, #000000 100%, #000000 100%);
-background: linear-gradient(to bottom, #13116D 0%, #000000 100%, #000000 100%);
+  background: #09054D;
+background: -moz-linear-gradient(top, #09054D 0%, #040728 83%, #050328 100%);
+background: -webkit-linear-gradient(top, #09054D 0%, #040728 83%, #050328 100%);
+background: linear-gradient(to bottom, #09054D 0%, #040728 83%, #050328 100%);
 }
 
