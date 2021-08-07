@@ -1,5 +1,6 @@
 import { useState } from "react"
 import {Modal, Button} from "react-bootstrap"
+import ReactStars from "react-rating-stars-component";
 
 
 function Add({Movies,setMovies, Rating}) {

@@ -1,4 +1,7 @@
-function Stars({ setRating, ReactStars }) {
+
+import ReactStars from "react-rating-stars-component";
+
+function Stars({ setRating}) {
     const ratingChanged = (newRating) => {
       setRating(newRating);
     };
