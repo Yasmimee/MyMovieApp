@@ -1,12 +1,14 @@
+
 import React from "react";
 
 import Navb from "./components/nav.js";
 
 import List from "./components/list.js";
 import Add from "./components/add.js";
+import description from "./components/description.js";
 import app from "./App.css";
 import { useState } from "react";
-import { Rating } from "semantic-ui-react";
+import { BrowserRouter, Link, Route, Router } from 'react-router-dom'
 
 function App() {
   const [search, setSearch] = useState("");
@@ -20,6 +22,7 @@ function App() {
       img: "https://m.media-amazon.com/images/I/71LD6AGowjL._AC_SL1100_.jpg",
       describtion:
         "Cruella follows her life story and her attempts to get revenge on Baroness von Hellman.",
+        <Link to ={'/description/movie.id'}>Read more </Link>,
       rate: 3
     },
     {
@@ -110,9 +113,12 @@ function App() {
 
   return (
     <div className="App">
+      <Router>
+      <Route path='/description/:id' exact component={description}/>
       <Navb setSearch={setSearch} setRating={setRating} />
       <List Movies={Movies} search={search} rating={rating} />
       <Add Movies={Movies} setMovies={setMovies} />
+      </Router>
     </div>
   );
 }

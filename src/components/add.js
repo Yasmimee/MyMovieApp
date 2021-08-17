@@ -1,6 +1,7 @@
 import { useState } from "react"
 import {Modal, Button} from "react-bootstrap"
-import ReactStars from "react-rating-stars-component";
+import Stars from "./stars";
+
 
 
 function Add({Movies,setMovies, Rating}) {
@@ -41,7 +42,7 @@ function Add({Movies,setMovies, Rating}) {
         <label>Poster URL :</label><br></br>
         <input type='text' value={ url}  onChange={(c)=> seturl(c.target.value)} ></input><br></br>
         <label>Movie Rating</label> <br></br>
-        <input></input> <br></br>
+        <Stars setRating={setRating} /> <br></br>
         <label>Movie Describtion</label><br></br>
         <textarea type='text' value={ des}  onChange={(d)=> setdes(d.target.value)}></textarea><br></br>
         </Modal.Body>
