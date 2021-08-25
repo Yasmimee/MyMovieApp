@@ -1,11 +1,18 @@
-import {BrowserRouter, Router} from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import React from 'react'
-function description (){
+function Description ({Movies}){
+    const { id } = useParams();
+    const foundmovie = Movies.find((el) => el.id == id);
     return(
         <div>
-            <h1>movie description</h1>
+            <h1>{foundmovie.name}</h1>
+            <img src={foundmovie.img} style={{ width: '200px' }}></img>
+            <p style={{ fontSize: "16pt" }}>{foundmovie.describtion}</p>
+            <iframe src={foundmovie.trailer}></iframe>
+            
+            
         </div>
 
     )
 }
-export default description
+export default Description

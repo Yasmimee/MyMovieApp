@@ -1,4 +1,5 @@
 import ReactStars from "react-rating-stars-component";
+import {Link} from 'react-router-dom'
 function MovieCard({ el }) {
   return (
     <div className="card" style={{ width: "18rem" }}>
@@ -9,11 +10,13 @@ function MovieCard({ el }) {
         </h5>
         <ReactStars value={el.rate} />
         <h6 className="genre">{el.type} </h6>
-
         <p className="card-text">{el.describtion}</p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
-        </a>
+        <Link to={`/movies/${el.id}`}>
+
+        
+        <button href="#" className="btn btn-primary">
+          More details
+        </button></Link>
       </div>
     </div>
   );
